@@ -3,11 +3,6 @@ var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do"));
 
 
-// on click function of save button to save content to local storage
-$(".saveBtn").on("click", function () {
-
-})
-
 
 // function to checkhour against user selectedhour
 function checkHour() {
@@ -16,7 +11,7 @@ function checkHour() {
     // loop for .time-block to check currentHour against SelectedHour
     $(".time-block").each(function () {
         var selectedHour = parseInt($(this).attr("id"));
-        console.log(selectedHour, currentHour)
+
 
         if (selectedHour < currentHour) {
             $(this).addClass("past");
@@ -31,3 +26,12 @@ function checkHour() {
 }
 
 checkHour()
+
+// on click function of save button to save content to local storage
+$(".saveBtn").on("click", function () {
+
+    var text;
+    var time;
+
+    localStorage.setItem(time, text)
+})
