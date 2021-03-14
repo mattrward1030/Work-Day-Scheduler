@@ -13,6 +13,7 @@ function checkHour() {
         var selectedHour = $(this).attr("id");
 
 
+
         if (selectedHour < currentHour) {
             $(this).addClass("past");
         }
