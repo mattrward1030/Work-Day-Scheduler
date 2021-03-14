@@ -8,3 +8,7 @@ $(".saveBtn").on("click", function () {
 
 
 
+function checkHour() {
+    var currentHour = moment().hour();
+
+}
