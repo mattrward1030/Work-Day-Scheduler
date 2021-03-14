@@ -13,10 +13,20 @@ $(".saveBtn").on("click", function () {
 function checkHour() {
     var currentHour = moment().hour();
 
-    // loop for .time-block
+    // loop for .time-block to check currentHour against SelectedHour
     $(".time-block").each(function () {
         var selectedHour = parseInt($(this).attr("id"));
         console.log(selectedHour, currentHour)
+
+        if (selectedHour < currentHour) {
+            $(this).addClass("past");
+        }
+        else if (selectedHour > currentHour) {
+            $(this).addClass("future");
+        }
+        else {
+            $(this).addClass("present");
+        }
     })
 }
 
