@@ -39,7 +39,6 @@ $(".saveBtn").on("click", function () {
 
 // for each loop function to get the value from the key (time) and then change the value in the text area
 $(".time-block").each(function () {
-    console.log(this)
     var time = $(this).attr("id")
     var text = localStorage.getItem(time)
     $(this).children(".description").val(text)
